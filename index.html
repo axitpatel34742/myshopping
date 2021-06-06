@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shopping-Site</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		body{
+			margin: 0;
+			padding: 0;
+			
+			background: #000;
+		}
+		h1{
+			height: 70vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 0;
+			padding: 0;
+			color: #111;
+			font-size: 14em;
+		}
+		h1 span{
+			display: table-cell;
+			animation: animate 1.0s linear infinite;
+		}
+		
+		h1 span:nth-child(1){
+			animation-delay: 0s;
+		}
+		h1 span:nth-child(2){
+			animation-delay: 0.3s;
+		}
+		h1 span:nth-child(3){
+			animation-delay: 0.5s;
+		}
+		h1 span:nth-child(4){
+			animation-delay: 0.8s;
+		}
+		@keyframes animate
+		{
+			0%,100%
+			{
+				color: #fff;
+				filter: blur(2px);
+				text-shadow: 0 0 10px #00b3ff,
+				            0 0 20px #00b3ff,
+				            0 0 40px #00b3ff,
+				            0 0 80px #00b3ff;
+
+			}
+			5%,95%
+			{
+				color: #fff;
+				filter: blur(0px);
+				text-shadow:none;
+
+			}
+		}
+         
+	   .btn{
+			border: 1px solid black;
+			border-radius: 15px;
+			color: white;
+			background-color: black;
+			font-size: 5em;
+			margin-top: -5px;
+			
+		}
+		.btn:hover{
+			color: #e2b50f;
+		}
+	</style>
+</head>
+<body>
+  <div>
+    <h1>
+    	<span>A</span>
+    	<span>X</span>
+    	<span>I</span>
+    	<span>T</span>
+    </h1>
+    
+    <a href="sell.html">
+    <button class="btn">		Click Here</button></a>
+    
+  </div>  
+</body>
+</html> 

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sell</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-10 col-11 mx-auto">
+			<div class="row mt-2 gx-3">
+				<!-- left side div -->
+				<div class="col-md-12 col-lg-8 col-11 mx-auto main_cart mb-lg-0 mb-2 shadow">
+					<div class="card p-3">
+						<h2 class="py-1">Cart (2 items)</h2>
+						<div class="row">
+						<!-- card img div -->
+							<div class="col-md-5 col-11 mx-auto bg-light d-flex justify-content-center align-items-center shadow product_img">
+								<img style=" height: 200px;  width: 200px;" src="1.jpg" class="img-fluid" alt="cart img">
+							</div>
+
+							<!-- card product details -->
+							<div class="col-md-7 col-11 mx-auto px-4 mt-2">
+								<div class="row">
+									<!-- product name -->
+									<div class="col-6 card-title">
+										<h1 class="mb-4 product_name">Blue Shirt</h1>
+										<p class="mb-2">Shirt-Blue</p>
+										<p class="mb-2">Color: Blue</p>
+										<p class="mb-3">Size: M</p>
+									</div>
+
+									<!-- Quantity Increment -->
+									<div class="col-6">
+										<ul class="pagination justify-content-end set_quantity">
+                                          <li class="page-item">
+                                          <button class="page-link" onclick="decreaseNumber('textbox','itemval')"> <i class="fas fa-minus"></i></button></li>
+                                          <li class="page-item">
+                                          <input type="text" name="textbox" value="0" id="textbox" class="page-link"></li>
+                                          <li class="page-item">
+                                          <button class="page-link" onclick="increaseNumber('textbox','itemval')"><i class="fas fa-plus-square"></i></button></li>
+                                        </ul>
+									</div>
+								</div>
+
+								<!-- remove and price -->
+								<div class="row">
+									<div class="col-8 d-flex justify-content-between remove_wish">
+										<p><i class="fas fa-trash-alt"></i>Remove Item</p>
+										<p><i class="fas fa-heart"></i>Move to Wish List</p>
+									</div>
+									<dir class="col-4 d-flex justify-content-end price_money">
+										<h3>$<span id="itemval">0.00</span></h3>
+									</dir>
+								</div>
+							</div>
+						</div>
+					</div>	
+					<hr>
+					<!-- 2nd card start -->
+					<div class="card p-2">
+						<div class="row">
+						<!-- card img div -->
+							<div class="col-md-5 col-11 mx-auto bg-light d-flex justify-content-center align-items-center shadow product_img">
+								<img style=" height: 200px;  width: 200px;" src="2.jpg" class="img-fluid" alt="cart img">
+							</div>
+
+							<!-- card product details -->
+							<div class="col-md-7 col-11 mx-auto px-4 mt-2">
+								<div class="row">
+									<!-- product name -->
+									<div class="col-6 card-title">
+										<h1 class="mb-4 product_name">Brown Shirt</h1>
+										<p class="mb-2">Shirt-Brown</p>
+										<p class="mb-2">Color: Brown</p>
+										<p class="mb-3">Size: M</p>
+									</div>
+
+									<!-- Quantity Increment -->
+									<div class="col-6">
+										<ul class="pagination justify-content-end set_quantity">
+                                          <li class="page-item">
+                                          <button class="page-link" onclick="decreaseNumber('textbox1','itemval1')"> <i class="fas fa-minus"></i></button></li>
+                                          <li class="page-item">
+                                          <input type="text" name="textbox1" value="0" id="textbox1" class="page-link"></li>
+                                          <li class="page-item">
+                                          <button class="page-link" onclick="increaseNumber('textbox1','itemval1')"><i class="fas fa-plus-square"></i></button></li>
+                                        </ul>
+									</div>
+								</div>
+
+								<!-- remove and price -->
+								<div class="row">
+									<div class="col-8 d-flex justify-content-between remove_wish">
+										<p><i class="fas fa-trash-alt"></i>Remove Item</p>
+										<p><i class="fas fa-heart"></i>Move to Wish List</p>
+									</div>
+									<dir class="col-4 d-flex justify-content-end price_money">
+										<h3>$<span id="itemval1">0.00</span></h3>
+									</dir>
+								</div>
+							</div>
+						</div>
+					</div>				
+				</div>
+
+				<!-- right side div -->
+				<div class="col-md-12 col-lg-4 col-11 mx-auto mt-lg-0 mt-md-5">
+					<div class="right_side p-3 shadow bg-white">
+						<h2 class="product_name mb-5">Total Amount</h2>
+						<div class="price_indiv d-flex justify-content-between">
+							<p>Product Amount</p>
+							<p>$<span id="p_amt">0.00</span></p>
+						</div>
+						<div class="price_indiv d-flex justify-content-between">
+							<p>Shipping Charge</p>
+							<p>$<span id="shipping_charge">20.00</span></p>
+						</div>
+						<hr>
+						<div class="total_amt d-flex justify-content-between font-weight-bold">
+							<p>Total Amount of (icludeing VAT)</p>
+							<p>$<span id="total_cart_amt">0.00</span></p>
+						</div>
+						<a href="thank.html">
+						<button class="btn btn-info text-uppercase" onSubmit="alert('Thank you for Shopping.');">CheckOut</button>
+						</a>
+					</div>
+
+					<!-- discount code -->
+					<div class="discount_code mt-3 shadow">
+						<div class="card">
+							<div class="card-body">
+								<a href="#collapseExample" onclick="alert('Code: axit')" class="d-flex justify-content-between" data-toggle="collapse" aria-expanded="false" aria-controls="collapseExample">
+									Add a discount code(optional)
+									<span><i class="fas fa-chevron-down pt-1"></i></span>
+								</a>
+								<div class="collapse" id="collapseExample">
+									<div class="mt-3">
+										<input type="text" name="" id="discount_code1" class="form-control font-weight-bold" placeholder="enter discount code">
+										<small id="error_trw"></small>
+									</div>
+									<button class="btn btn-primary btn-sm mt-3" onclick="discount_code()">Apply</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- discount -->
+					<div class="mt-3 s">
+						<h5>Expected delivery date</h5>
+						<p>May 27th Dec- Dec 30th, 2021</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+
+
+   var product_amt = document.getElementById('p_amt');
+   var total_amt = document.getElementById('total_cart_amt');
+   var shipping_charge = document.getElementById('shipping_charge');
+   var discountCode1 = document.getElementById('discount_code1');
+   
+
+	const decreaseNumber = (incdec,val) => {
+		var itemval = document.getElementById(incdec);
+		var v = document.getElementById(val);
+
+		if (itemval.value <= 0) {
+  			total_amt.innerHTML = 0;
+			itemval.value = 0;
+			alert('negative not allowed');
+		}else{
+			itemval.value = parseInt(itemval.value) - 1;
+			v.innerHTML = parseInt(v.innerHTML) - 15;
+			itemval.style.background = '#fff';
+			itemval.style.color = '#000';
+			product_amt.innerHTML = parseInt(product_amt.innerHTML) - 15;
+
+			total_amt.innerHTML = parseInt(product_amt.innerHTML) + parseInt(shipping_charge.innerHTML);
+		}
+	}
+
+	const increaseNumber = (incdec,val) => {
+		var itemval = document.getElementById(incdec);
+		var v = document.getElementById(val);
+
+		if (itemval.value >= 5) {
+			itemval.value = 5;
+			
+			itemval.style.background = 'red';
+			itemval.style.color = '#fff';
+			alert('max 5 allowed');
+		}else{
+			itemval.value = parseInt(itemval.value) + 1;
+			v.innerHTML = parseInt(v.innerHTML) + 15;
+			product_amt.innerHTML = parseInt(product_amt.innerHTML) + 15;
+			total_amt.innerHTML = parseInt(product_amt.innerHTML) + parseInt(shipping_charge.innerHTML);
+		}
+	}
+
+	const discount_code = () =>{
+    let totalcnt = parseInt(total_amt.innerHTML);
+
+     if( discountCode1.value == 'yash')
+     {
+     let newtotal = totalcnt - 15;
+     total_amt.innerHTML = newtotal;
+     alert('Succeed');
+     }else{
+     	alert('Try Again');
+     } 
+   }
+	</script>
+
+
+</body>
+</html>
+
+
